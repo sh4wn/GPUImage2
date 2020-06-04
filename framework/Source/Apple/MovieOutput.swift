@@ -20,8 +20,13 @@ public class MovieOutput: ImageConsumer, AudioEncodingTarget {
     private var videoEncodingIsFinished = false
     private var audioEncodingIsFinished = false
     private var startTime:CMTime?
+    #if swift(>=5.0)
+    private var previousFrameTime = CMTime.negativeInfinity
+    private var previousAudioTime = CMTime.negativeInfinity
+    #else
     private var previousFrameTime = kCMTimeNegativeInfinity
     private var previousAudioTime = kCMTimeNegativeInfinity
+    #endif
     private var encodingLiveVideo:Bool
     var pixelBuffer:CVPixelBuffer? = nil
     var renderFramebuffer:Framebuffer!
@@ -45,7 +50,11 @@ public class MovieOutput: ImageConsumer, AudioEncodingTarget {
         self.size = size
         assetWriter = try AVAssetWriter(url:URL, fileType:fileType)
         // Set this to make sure that a functional movie is produced, even if the recording is cut off mid-stream. Only the last second should be lost in that case.
+        #if swift(>=5.0)
+        assetWriter.movieFragmentInterval = CMTimeMakeWithSeconds(1.0, preferredTimescale:1000)
+        #else
         assetWriter.movieFragmentInterval = CMTimeMakeWithSeconds(1.0, 1000)
+        #endif
         
         var localSettings:[String:AnyObject]
         if let settings = settings {
@@ -266,7 +275,11 @@ public extension Timestamp {
     
     var asCMTime:CMTime {
         get {
+            #if swift(>=5.0)
+            return CMTimeMakeWithEpoch(value:value, timescale:timescale, epoch:epoch)
+            #else
             return CMTimeMakeWithEpoch(value, timescale, epoch)
+            #endif
         }
     }
 }
