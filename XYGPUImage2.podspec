@@ -12,12 +12,12 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.license  = 'BSD'
   s.summary  = 'An open source iOS framework for GPU-based image and video processing.'
-  s.homepage = 'https://github.com/BradLarson/GPUImage2'
+  s.homepage = 'https://github.com/sh4wn/GPUImage2'
   s.author   = { 'Brad Larson' => 'contact@sunsetlakesoftware.com' }
-  s.source   = { :git => 'https://github.com/BradLarson/GPUImage2.git', :branch => "master" }
+  s.source   = { :git => 'https://github.com/sh4wn/GPUImage2.git', :branch => "master" }
 
-  s.source_files = 'Source/*.{swift}','Source/Apple/*.{swift}','Source/OPerations/*.{swift}'
-  s.resources = 'Source/Operations/Shaders/*.{fsh}'
+  s.source_files = 'framework/Source/*.{swift}','framework/Source/Apple/*.{swift}','framework/Source/OPerations/*.{swift}'
+  s.resources = 'framework/Source/Operations/Shaders/*.{fsh}'
   s.requires_arc = true
   s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES','OTHER_SWIFT_FLAGS' => "$(inherited) -DGLES"}
 

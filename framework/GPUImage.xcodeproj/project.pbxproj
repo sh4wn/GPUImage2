@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09728E9A2488F349002D45BC /* XYGPUImage2.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 09728E992488F349002D45BC /* XYGPUImage2.podspec */; };
-		098774102488FB1E0036D6F8 /* License in Resources */ = {isa = PBXBuildFile; fileRef = 0987740F2488FB1E0036D6F8 /* License */; };
 		BC09239E1C92658200A2ADFA /* ShaderProgram_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */; };
 		BC0923A11C92661D00A2ADFA /* Pipeline_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */; };
 		BC0923A21C92664900A2ADFA /* Framebuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB279EB1C8D11630013E213 /* Framebuffer.swift */; };
@@ -370,8 +368,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09728E992488F349002D45BC /* XYGPUImage2.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XYGPUImage2.podspec; sourceTree = "<group>"; };
-		0987740F2488FB1E0036D6F8 /* License */ = {isa = PBXFileReference; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
 		BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderProgram_Tests.swift; path = Tests/ShaderProgram_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pipeline_Tests.swift; path = Tests/Pipeline_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC1E12F41C9F2FD7008F844F /* ThreeInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = ThreeInput.vsh; path = Source/Operations/Shaders/ThreeInput.vsh; sourceTree = "<group>"; };
@@ -933,8 +929,6 @@
 		BC6E7CA11C39A9D8006DF678 = {
 			isa = PBXGroup;
 			children = (
-				0987740F2488FB1E0036D6F8 /* License */,
-				09728E992488F349002D45BC /* XYGPUImage2.podspec */,
 				BC6E7CC51C39AD7B006DF678 /* Base */,
 				BCD1B1441C66A890001F2BDC /* Inputs */,
 				BCD1B1451C66A89D001F2BDC /* Outputs */,
@@ -1315,8 +1309,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				098774102488FB1E0036D6F8 /* License in Resources */,
-				09728E9A2488F349002D45BC /* XYGPUImage2.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
